@@ -69,7 +69,7 @@ public class SecurityConfig {
                         configuration.setAllowedOrigins(Arrays.asList(
                                 "http://localhost:8080",
                                 "https://port-0-recallquest-m3vw3lvu42683571.sel4.cloudtype.app",
-                                "http://localhost:54312"
+                                "http://localhost:65516"
                         ));
 
 //                        configuration.setAllowedOrigins(Collections.singletonList("http://192.210.55.10:8088"));

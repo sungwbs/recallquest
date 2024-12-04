@@ -17,6 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 @Configuration
@@ -59,10 +60,17 @@ public class SecurityConfig {
 
                         CorsConfiguration configuration = new CorsConfiguration();
 
-                        configuration.setAllowedOrigins(Collections.singletonList("http://localhost:8080"));
-                        configuration.setAllowedOrigins(Collections.singletonList("https://port-0-recallquest-m3vw3lvu42683571.sel4.cloudtype.app"));
-                        configuration.setAllowedOrigins(Collections.singletonList("http://localhost:52674"));
+//                        configuration.setAllowedOrigins(Collections.singletonList("http://localhost:8080"));
+//                        configuration.setAllowedOrigins(Collections.singletonList("https://port-0-recallquest-m3vw3lvu42683571.sel4.cloudtype.app"));
+//                        configuration.setAllowedOrigins(Collections.singletonList("http://localhost:52674"));
+//
 
+                        // 여러 Origin을 리스트로 설정
+                        configuration.setAllowedOrigins(Arrays.asList(
+                                "http://localhost:8080",
+                                "https://port-0-recallquest-m3vw3lvu42683571.sel4.cloudtype.app",
+                                "http://localhost:52674"
+                        ));
 
 //                        configuration.setAllowedOrigins(Collections.singletonList("http://192.210.55.10:8088"));
                         configuration.setAllowedMethods(Collections.singletonList("*"));

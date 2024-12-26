@@ -64,16 +64,18 @@ public class SecurityConfig {
 //                        configuration.setAllowedOrigins(Collections.singletonList("https://port-0-recallquest-m3vw3lvu42683571.sel4.cloudtype.app"));
 //                        configuration.setAllowedOrigins(Collections.singletonList("http://localhost:52674"));
 //
+//                        // 여러 Origin을 리스트로 설정
+//                        configuration.setAllowedOrigins(Arrays.asList(
+//                                "http://localhost:8080",
+//                                "https://port-0-recallquest-m3vw3lvu42683571.sel4.cloudtype.app",
+//                                "http://localhost:50317/",
+//                                "http://localhost:61428/"
+//                        ));
 
-                        // 여러 Origin을 리스트로 설정
-                        configuration.setAllowedOrigins(Arrays.asList(
-                                "http://localhost:8080",
-                                "https://port-0-recallquest-m3vw3lvu42683571.sel4.cloudtype.app",
-                                "http://localhost:50317/",
-                                "http://localhost:50317"
-                        ));
+                        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
 
-//                        configuration.setAllowedOrigins(Collections.singletonList("http://192.210.55.10:8088"));
+
+//                      configuration.setAllowedOrigins(Collections.singletonList("http://192.210.55.10:8088"));
                         configuration.setAllowedMethods(Collections.singletonList("*"));
                         configuration.setAllowCredentials(true);
                         configuration.setAllowedHeaders(Collections.singletonList("*"));
